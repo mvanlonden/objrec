@@ -1,0 +1,5 @@
+<map id="CPAccordionView" name="CPAccordionView">
+<area shape="rect" id="node2" href="$interface_c_p_view.html" title="CPView" alt="" coords="38,166,105,197"/>
+<area shape="rect" id="node4" href="$interface_c_p_responder.html" title="CPResponder" alt="" coords="19,86,125,117"/>
+<area shape="rect" id="node6" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="32,6,111,37"/>
+</map>

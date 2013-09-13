@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <object data="DndD.svg" id="oo" style="width: 800px" height="500px">
+
+        </object>
+        <span id="trail" style="visibility: hidden"></span>
+    </body>
+<script type="text/javascript">
+
+            var far=document.getElementById("oo")
+            far.addEventListener("load", function (){
+            var svgDoc=far.contentDocument;
+            var svgRoot=svgDoc.documentElement;
+            var r=svgDoc.getElementById("rectangle")
+            r.onmousemove=function(evt){
+            var x=evt.pageX
+            var y=evt.pageY
+            document.getElementById('trail').style.visibility="visible";
+            document.getElementById('trail').style.position="absolute";
+            document.getElementById('trail').style.left=evt.clientX+10;
+            document.getElementById('trail').style.top=evt.clientY;
+            document.getElementById("trail").innerHTML=x+","+y
+            }
+            var line2;
+            var count=0
+            var xx=0
+            var yy=0
+           line2="line_id"+count
+           for(var i=0;i<=48;i++){
+               xx=xx+10
+                var line=svgDoc.createElementNS("http://www.w3.org/2000/svg", "line")
+                line.setAttribute("id", line2)
+                line.setAttribute("x1", xx)
+                line.setAttribute("y1", "0")
+                line.setAttribute("x2", xx)
+                line.setAttribute("y2", "400")
+                line.setAttribute("stroke", "red")
+                line.setAttribute("stroke-width", "1")
+                line.setAttribute("pointer-events", "none")
+                svgRoot.appendChild(line)
+
+            }
+
+            for(var i=0;i<=39;i++){
+               yy=yy+10
+                var line=svgDoc.createElementNS("http://www.w3.org/2000/svg", "line")
+                line.setAttribute("id", line2)
+                line.setAttribute("x1", "0")
+                line.setAttribute("y1", yy)
+                line.setAttribute("x2", "500")
+                line.setAttribute("y2", yy)
+                line.setAttribute("stroke", "red")
+                line.setAttribute("stroke-width", "1")
+                line.setAttribute("pointer-events", "none")
+                svgRoot.appendChild(line)
+
+            }
+
+                var rec = svgDoc.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rec.setAttribute("id", "btn_rect");
+                rec.setAttribute("fill","orange")
+                rec.setAttribute("stroke","black")
+                rec.setAttribute( "x","100px")
+                rec.setAttribute( "y","100px")
+                rec.setAttribute( "width","45px")
+                rec.setAttribute( "height","45px")
+                rec.setAttribute( "rx","3px")
+                rec.setAttribute( "ry","3px")
+                svgRoot.appendChild(rec);
+
+    },false)
+    </script>
+    </html>

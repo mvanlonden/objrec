@@ -1,0 +1,6 @@
+<map id="CPSegmentedControl" name="CPSegmentedControl">
+<area shape="rect" id="node2" href="$interface_c_p_control.html" title="CPControl" alt="" coords="41,246,127,277"/>
+<area shape="rect" id="node4" href="$interface_c_p_view.html" title="CPView" alt="" coords="50,166,117,197"/>
+<area shape="rect" id="node6" href="$interface_c_p_responder.html" title="CPResponder" alt="" coords="31,86,137,117"/>
+<area shape="rect" id="node8" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="44,6,123,37"/>
+</map>

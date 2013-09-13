@@ -1,0 +1,5 @@
+<map id="CPCollectionView" name="CPCollectionView">
+<area shape="rect" id="node2" href="$interface_c_p_view.html" title="CPView" alt="" coords="37,166,104,197"/>
+<area shape="rect" id="node4" href="$interface_c_p_responder.html" title="CPResponder" alt="" coords="17,86,124,117"/>
+<area shape="rect" id="node6" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="31,6,109,37"/>
+</map>

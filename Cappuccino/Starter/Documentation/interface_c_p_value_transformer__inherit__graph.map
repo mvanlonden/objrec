@@ -1,0 +1,7 @@
+<map id="CPValueTransformer" name="CPValueTransformer">
+<area shape="rect" id="node5" href="$interface_c_p_is_nil_transformer.html" title="CPIsNilTransformer" alt="" coords="386,5,532,35"/>
+<area shape="rect" id="node7" href="$interface_c_p_is_not_nil_transformer.html" title="CPIsNotNilTransformer" alt="" coords="374,59,543,90"/>
+<area shape="rect" id="node9" href="$interface_c_p_negate_boolean_transformer.html" title="CPNegateBooleanTransformer" alt="" coords="351,114,566,145"/>
+<area shape="rect" id="node11" href="$interface_c_p_unarchive_from_data_transformer.html" title="CPUnarchiveFromDataTransformer" alt="" coords="336,169,581,199"/>
+<area shape="rect" id="node2" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="5,87,85,118"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CPTableHeaderView" name="CPTableHeaderView">
+<area shape="rect" id="node2" href="$interface_c_p_view.html" title="CPView" alt="" coords="46,166,113,197"/>
+<area shape="rect" id="node4" href="$interface_c_p_responder.html" title="CPResponder" alt="" coords="27,86,133,117"/>
+<area shape="rect" id="node6" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="40,6,119,37"/>
+</map>

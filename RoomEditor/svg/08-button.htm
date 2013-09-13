@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ascii">
+    <title>Jeremy's 2D Mobile Device Revit Model Editor Room</title>
+    <link rel="stylesheet" href="demo.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="demo-print.css" type="text/css" media="print">
+    <script src="raphael-min-jt.js" type="text/javascript" charset="ascii"></script>
+    <script type="text/javascript" charset="ascii">
+      window.onload = function () {
+
+        // ratotion support
+
+        var current_furniture = null;
+
+        function rotate_item (item, angle) {
+          if( null != item ) {
+            item.rotate( angle );
+            item.data( "angle",
+              item.data( "angle" ) + angle );
+          }
+        }
+
+        function rotate_current_cw () {
+          rotate_item( current_furniture, 5 );
+        }
+
+        function rotate_current_ccw () {
+          rotate_item( current_furniture, -5 );
+        }
+
+        // identification support
+
+        function identify (item) {
+          var jid = item.data("jid");
+
+          current_furniture
+            = (0 == jid.indexOf("table")
+              || 0 == jid.indexOf("chair"))
+              ? item
+              : null;
+
+          var s = jid + " " + item.id.toString();
+          t.attr({text:s});
+        }
+
+        function jonclick2 () {
+          identify( this );
+        }
+
+        // drag support
+
+        function dragger () {
+          identify( this );
+          this.ox = this.type == "rect" ? this.attr("x") : this.attr("cx");
+          this.oy = this.type == "rect" ? this.attr("y") : this.attr("cy");
+          this.animate({"fill-opacity": .5}, 500);
+          this.rotate( -this.data("angle") );
+        }
+
+        function move (dx, dy) {
+          var att = this.type == "rect"
+            ? {x: this.ox + dx, y: this.oy + dy}
+            : {cx: this.ox + dx, cy: this.oy + dy};
+          this.attr(att);
+          r.safari();
+        }
+
+        function up () {
+          this.rotate( this.data("angle") );
+          this.animate({"fill-opacity": 1}, 500);
+        }
+
+        // canvas
+
+        var w = 600, h = 400;
+        var r = Raphael("holder", w, h);
+        --w;
+        --h;
+
+        // background
+
+        r.rect(0, 0, w, h, 10)
+          .attr({stroke: "#666", fill:"#222"})
+          .data("jid", "background")
+          .click(jonclick2);
+
+        // grid
+
+        var d = 50, i;
+
+        for (i = d; i < h; i += d) {
+          r.path([[ "M", 0, i], ["L", w, i]])
+            .attr({stroke: "#666"});
+        }
+
+        for (i = 50; i < 600; i += 50) {
+          r.path([["M", i, 0], ["L", i, w]])
+            .attr({stroke: "#666"});
+        }
+
+        // room - outer loop anti-clockwise, inner clockwise
+
+        var room = r
+          .path("M 40 40 L 440 40 440 300 300 300 300 200 40 200 Z"
+            + "M 320 240 L 320 280 420 280 420 240 Z")
+          .attr({stroke: "blue", fill:"lightblue"})
+          .data("jid", "room")
+          .click(jonclick2);
+
+        // reporting text
+
+        var t = r
+          .text(300, 350, "Welcome. Please click or drag furniture.")
+          .attr({fill: "#fff", "font-size": 16});
+
+        // furniture
+
+        var att = {stroke: "black", fill:"blue"};
+
+        r.rect(100, 100, 200, 40, 5).click(jonclick2).data("jid", "table").data("angle", 0.0).attr(att).drag(move, dragger, up);
+        r.rect(75, 110, 16, 22, 5).click(jonclick2).data("jid", "chair1").data("angle", 0.0).attr(att).drag(move, dragger, up);
+        r.rect(118, 150, 22, 16, 5).click(jonclick2).data("jid", "chair2").data("angle", 0.0).attr(att).drag(move, dragger, up);
+        r.rect(158, 150, 22, 16, 5).click(jonclick2).data("jid", "chair3").data("angle", 0.0).attr(att).drag(move, dragger, up);
+        r.rect(198, 150, 22, 16, 5).click(jonclick2).data("jid", "chair4").data("angle", 0.0).attr(att).drag(move, dragger, up);
+        r.rect(238, 150, 22, 16, 5).click(jonclick2).data("jid", "chair5").data("angle", 0.0).attr(att).drag(move, dragger, up);
+
+        // buttons to rotate selected element
+
+        r.rect(440, 370, 120, 20, 5)
+          .attr({stroke: "black", fill:"blue"})
+          .click(rotate_current_ccw)
+
+        r.text(500, 380, "Rotate selected item")
+          .attr({fill: "#fff", "font-size": 12})
+          .click( rotate_current_cw );
+
+        r.rect(565, 370, 30, 20, 5)
+          .attr({stroke: "black", fill:"blue"})
+          .click(rotate_current_ccw)
+
+        r.text(580, 380, "ccw")
+          .attr({fill: "#fff", "font-size": 12})
+          .click( rotate_current_ccw );
+      };
+    </script>
+  </head>
+  <body>
+    <div id="holder"></div>
+    <p id="copy">Jeremy Tammik, Autodesk Inc. using the <a href="http://raphaeljs.com">Raphael</a> JavaScript vector library</p>
+  </body>
+</html>

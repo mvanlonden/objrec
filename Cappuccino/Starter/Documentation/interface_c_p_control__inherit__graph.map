@@ -1,0 +1,27 @@
+<map id="CPControl" name="CPControl">
+<area shape="rect" id="node9" href="$interface_c_p_browser.html" title="CPBrowser" alt="" coords="575,31,665,62"/>
+<area shape="rect" id="node11" href="$interface_c_p_button.html" title="CPButton" alt="" coords="580,86,660,117"/>
+<area shape="rect" id="node21" href="$interface_c_p_color_well.html" title="CPColorWell" alt="" coords="570,141,670,171"/>
+<area shape="rect" id="node23" href="$interface_c_p_image_view.html" title="CPImageView" alt="" coords="566,195,674,226"/>
+<area shape="rect" id="node25" href="$interface_c_p_level_indicator.html" title="CPLevelIndicator" alt="" coords="556,250,684,281"/>
+<area shape="rect" id="node27" href="$interface_c_p_rule_editor.html" title="A view for creating and configuring criteria." alt="" coords="568,305,672,335"/>
+<area shape="rect" id="node31" href="$interface_c_p_scroller.html" title="CPScroller" alt="" coords="577,359,663,390"/>
+<area shape="rect" id="node33" href="$interface_c_p_segmented_control.html" title="CPSegmentedControl" alt="" coords="541,414,699,445"/>
+<area shape="rect" id="node35" href="$interface_c_p_slider.html" title="CPSlider" alt="" coords="583,469,657,499"/>
+<area shape="rect" id="node37" href="$interface_c_p_stepper.html" title="CPStepper" alt="" coords="576,523,664,554"/>
+<area shape="rect" id="node39" href="$interface_c_p_table_view.html" title="CPTableView" alt="" coords="568,578,672,609"/>
+<area shape="rect" id="node43" href="$interface_c_p_text_field.html" title="CPTextField" alt="" coords="571,659,669,690"/>
+<area shape="rect" id="node2" href="$interface_c_p_view.html" title="CPView" alt="" coords="289,333,357,363"/>
+<area shape="rect" id="node4" href="$interface_c_p_responder.html" title="CPResponder" alt="" coords="133,333,240,363"/>
+<area shape="rect" id="node6" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="5,333,85,363"/>
+<area shape="rect" id="node13" href="$interface_c_p_check_box.html" title="CPCheckBox" alt="" coords="771,5,872,35"/>
+<area shape="rect" id="node15" href="$interface_c_p_disclosure_button.html" title="CPDisclosureButton" alt="" coords="747,59,895,90"/>
+<area shape="rect" id="node17" href="$interface_c_p_pop_up_button.html" title="CPPopUpButton" alt="" coords="760,114,882,145"/>
+<area shape="rect" id="node19" href="$interface_c_p_radio.html" title="CPRadio" alt="" coords="784,169,858,199"/>
+<area shape="rect" id="node29" href="$interface_c_p_predicate_editor.html" title="CPPredicateEditor is a subclass of CPRuleEditor that is specialized for editing CPPredicate objects..." alt="" coords="754,305,889,335"/>
+<area shape="rect" id="node41" href="$interface_c_p_outline_view.html" title="CPOutlineView" alt="" coords="764,550,879,581"/>
+<area shape="rect" id="node45" href="$interface_c_p_combo_box.html" title="CPComboBox" alt="" coords="767,605,876,635"/>
+<area shape="rect" id="node47" href="$interface_c_p_search_field.html" title="CPSearchField" alt="" coords="766,659,877,690"/>
+<area shape="rect" id="node49" href="$interface_c_p_secure_text_field.html" title="CPSecureTextField" alt="" coords="751,714,891,745"/>
+<area shape="rect" id="node51" href="$interface_c_p_token_field.html" title="CPTokenField" alt="" coords="767,769,876,799"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="CPBinder" name="CPBinder">
+<area shape="rect" id="node5" href="$class_c_p_color_well_value_binder.html" title="CPColorWellValueBinder" alt="" coords="280,5,456,35"/>
+<area shape="rect" id="node7" href="$class_c_p_image_view_value_binder.html" title="CPImageViewValueBinder" alt="" coords="276,59,460,90"/>
+<area shape="rect" id="node9" href="$interface_c_p_predicate_editor_value_binder.html" title="CPPredicateEditorValueBinder" alt="" coords="262,114,474,145"/>
+<area shape="rect" id="node11" href="$class_c_p_table_column_value_binder.html" title="CPTableColumnValueBinder" alt="" coords="268,169,468,199"/>
+<area shape="rect" id="node13" href="$interface_c_p_table_content_binder.html" title="CPTableContentBinder" alt="" coords="285,223,451,254"/>
+<area shape="rect" id="node2" href="$interface_c_p_object.html" title="The root class from which most classes are subclassed." alt="" coords="5,114,85,145"/>
+</map>
